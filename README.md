@@ -9,6 +9,7 @@ The goal for Muvault is to be similar to git, where you can push and pull from r
 
 Music will be broken down into album chunks, folders which contain the music. Within each album, there should be an info.toml containing data pertanante to the album, which is:
 * List of all songs and their file names in the directory
+* List of SHA256 Signatures of all Tracks
 * The author(s) of the track 
 * The genre of the track
 
@@ -34,3 +35,6 @@ Using an album identified from `muvault ls`, it pulls an album straight into you
 
 Changes the method of storage, by just placing all the albums into a folder, organizing by genre, etc.
 
+6. `muvault runservice`
+
+Starts the Muvault service, allowing it to run as a background process. You can specify the port on which the service will run using the `--port` or `-p` option. By default, the service runs on port 20381.
